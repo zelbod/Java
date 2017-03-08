@@ -1,42 +1,28 @@
-import java.util.Scanner;
 
+public class Factorial {
 
-public class factorial_eg {	
 	public static void main(String[] args) {
-		powerFor(2, 3);
+			System.out.println(myexp(2));
 	}
 
-	public static double powerRecursive(double x, int n){
-		
-		if (n==0){
-			return 1;
-		}else{
-			return x*powerRecursive(x,n-1);
-			
-			}
+	public static double factorial(double y) {
+		double x = y;
+		while (y>1){
+			x = x* (y-1);
+			y=y-1;	
+		}
+		return x;
+	}
+	public static double myexp (int x) {
+		double result = 0;
+		double y = 1;
+		while (y>0){
+			result = 1 + x + Math.pow(x, y+1)/factorial(y+1);
+			y=Math.pow(x, y)/factorial(y);
+		}
+		return result;
 		
 	}
-	public static void powerIfelse(double x, int n){
-		double y, result;
-		y = x;
-		while (n > 1){
-			if (n==0){
-				n = 1;
-			}else{
-				
-			y = y*x;
-			n=n-1;
-			System.out.println(y);
-			}
-			}
-		
-	}	
-	public static void powerFor(double x, int n){
-		double y;
-		y = x;
-		for (int i=1; i<n; i++){
-			y = y*x;
-			System.out.println(y);
-		}
-	}	
 }
+
+
