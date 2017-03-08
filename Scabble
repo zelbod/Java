@@ -3,12 +3,12 @@ import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Test {
+public class Scabble {
 	
 	public static void main(String[] args) {
-		 System.out.println(isDoubloon("jib","quijibo"));
+		 System.out.println(isScabble("jib","quijibo"));
 	}
-	public static boolean isDoubloon(String s, String c){
+	public static boolean isScabble(String s, String c){
 		char[] y=s.toCharArray(); 
 		char[] x =c.toCharArray();
 		int counter = 0;
