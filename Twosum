@@ -1,0 +1,24 @@
+public static void main(String[] args) {
+	int[] numbers={2,7,11,15};
+	
+	System.out.println(Twosum(numbers, 26));
+	}
+	public static int[] Twosum(int[] numbers, int target){
+		int[] result=new int[2];
+		for (int x=0; x<numbers.length; x++){
+			//This loop goes through each number in the array.
+			//integer x contains the remaining result.
+			result[0]=numbers[x];
+			for (int y=0; y<numbers.length; y++){
+				//This loop is to compare each number in the array to see if it can be
+				//added and get the result for x;
+				result[1]=numbers[y];
+				if(result[0]+result[1]==target){
+					return result;
+				}
+			
+				}
+			}
+		return result;
+
+	}
